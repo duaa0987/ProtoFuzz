@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "protofuzz"
+version = "1.0.0"
+description = "A loopback-only educational TCP protocol fuzzer"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Dua Nadeem"}]
+dependencies = []
+
+[project.scripts]
+protofuzz = "protofuzz.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
